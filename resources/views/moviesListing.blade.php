@@ -16,10 +16,12 @@
         @foreach ($movies as $movie)
            <div class="card-movie">
                 <h1>{{ $movie['title'] }}</h1>
-                <h2>{{ $movie['original_title'] }}</h2>
-                <h3>{{ $movie['nationality'] }}</h3>
-                <h4>{{ $movie['date'] }}</h4>
-                <h5>{{ $movie['vote'] }}</h5>
+                <h2>({{ $movie['original_title'] }})</h2>
+                <p>
+                    <u>Nationality</u>: {{ $movie['nationality'] }}<br>
+                    <u>Exit date</u>: {{ $movie['date'] }}<br>
+                    <u>Rating</u>: {{ $movie['vote'] }}
+                </p>
            </div>
         @endforeach
 
